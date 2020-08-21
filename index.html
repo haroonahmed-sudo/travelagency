@@ -18,7 +18,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark toggle" >
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark toggle" >
             <div class="container-fluid ">
                 <a class="navbar-brand" href="#">Haroon Travel Agency</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -29,19 +29,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+                            <a class="nav-link active" id="Home1" aria-current="page" href="#Home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#AbouUs">AbouUs</a>
+                            <a class="nav-link"  id="AbouUs1"href="#AbouUs">AbouUs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#Services">Services</a>
+                            <a class="nav-link" id="Services1" href="#Services">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#Gallery">Gallery</a>
+                            <a class="nav-link" id="Gallery1" href="#Gallery">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#ContactUs">ContactUs</a>
+                            <a class="nav-link" id="ContactUs1" href="#ContactUs">ContactUs</a>
                         </li>
                     </ul>
 
@@ -49,6 +49,7 @@
             </div>
         </nav>
     </header>
+    <section  id="Home">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="flip-left">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -75,6 +76,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+    </section>
     <section class="my-5" id="AbouUs" data-aos="flip-left">
         <div class="container">
             <h1 class="text-center text-capatalize display-4">About Us</h1>
@@ -285,6 +287,46 @@
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
         })
+        const anchor = document.getElementById('Home1')
+         const anchor2 = document.getElementById('AbouUs1')
+         const anchor3 = document.getElementById('Services1')
+         const anchor4 = document.getElementById('Gallery1')
+         const anchor5 = document.getElementById('ContactUs1')
+     anchor.addEventListener('click',()=>{
+        anchor.classList.add('active')
+        anchor2.classList.remove('active')
+        anchor3.classList.remove('active')
+        anchor4.classList.remove('active')
+        anchor5.classList.remove('active')
+     })
+     anchor2.addEventListener('click',()=>{
+        anchor2.classList.add('active')
+        anchor.classList.remove('active')
+        anchor3.classList.remove('active')
+        anchor4.classList.remove('active')
+        anchor5.classList.remove('active')
+     })
+     anchor3.addEventListener('click',()=>{
+        anchor3.classList.add('active')
+        anchor.classList.remove('active')
+        anchor2.classList.remove('active')
+        anchor4.classList.remove('active')
+        anchor5.classList.remove('active')
+     })
+     anchor4.addEventListener('click',()=>{
+        anchor4.classList.add('active')
+        anchor.classList.remove('active')
+        anchor3.classList.remove('active')
+        anchor2.classList.remove('active')
+        anchor5.classList.remove('active')
+     })
+     anchor5.addEventListener('click',()=>{
+        anchor5.classList.add('active')
+        anchor.classList.remove('active')
+        anchor3.classList.remove('active')
+        anchor4.classList.remove('active')
+        anchor2.classList.remove('active')
+     })
      var btn = document.querySelector('#btn')
      btn.addEventListener('click',()=>{
        var name = document.getElementById('name').value;
@@ -314,7 +356,13 @@
      function topFunction(){
          document.body.scrollTop = 0;
          document.documentElement.scrollTop = 0;
+         anchor.classList.add('active')
+        anchor2.classList.remove('active')
+        anchor3.classList.remove('active')
+        anchor4.classList.remove('active')
+        anchor5.classList.remove('active')
      }
+ 
     </script>
     <script>
          
